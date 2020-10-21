@@ -92,7 +92,7 @@ function create() {
   stateText.anchor.setTo(0.5, 0.5);
   stateText.visible = false;
 
-  for (var i = 0; i < 3; i++) {
+  for (var i = 0; i < 1000; i++) {
     var ship = lives.create(game.world.width - 100 + 30 * i, 60, "ship");
     ship.anchor.setTo(0.5, 0.5);
     ship.angle = 90;
@@ -258,7 +258,7 @@ function enemyFires() {
     enemyBullet.reset(shooter.body.x, shooter.body.y);
 
     game.physics.arcade.moveToObject(enemyBullet, player, 120);
-    firingTimer = game.time.now + 2000;
+    firingTimer = game.time.now + 100; // should be 2000
   }
 }
 
@@ -271,8 +271,8 @@ function fireBullet() {
     if (bullet) {
       //  And fire it
       bullet.reset(player.x, player.y + 8);
-      bullet.body.velocity.y = -400;
-      bulletTime = game.time.now + 200;
+      bullet.body.velocity.y = -800;
+      bulletTime = game.time.now + 800;
     }
   }
 }
