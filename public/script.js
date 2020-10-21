@@ -258,7 +258,7 @@ function enemyFires() {
     enemyBullet.reset(shooter.body.x, shooter.body.y);
 
     game.physics.arcade.moveToObject(enemyBullet, player, 120);
-    firingTimer = game.time.now + 100; // should be 2000
+    firingTimer = game.time.now + 2000; // should be 2000
   }
 }
 
@@ -271,8 +271,8 @@ function fireBullet() {
     if (bullet) {
       //  And fire it
       bullet.reset(player.x, player.y + 8);
-      bullet.body.velocity.y = -800;
-      bulletTime = game.time.now + 800;
+      bullet.body.velocity.y = -400;
+      bulletTime = game.time.now + 400;
     }
   }
 }
