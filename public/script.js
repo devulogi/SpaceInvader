@@ -270,7 +270,7 @@ function fireBullet() {
     if (bullet) {
       //  And fire it
       bullet.reset(player.x, player.y + 8);
-      bullet.body.velocity.y = -800;
+      bullet.body.velocity.y = -400;
       bulletTime = game.time.now + 400;
     }
   }
