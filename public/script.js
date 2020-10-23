@@ -1,4 +1,4 @@
-var game = new Phaser.Game(800, 600, Phaser.AUTO, "phaser-example", {
+var game = new Phaser.Game(1200, 800, Phaser.AUTO, "phaser-example", {
   preload: preload,
   create: create,
   update: update,
@@ -92,7 +92,7 @@ function create() {
   stateText.anchor.setTo(0.5, 0.5);
   stateText.visible = false;
 
-  for (var i = 0; i < 3; i++) {
+  for (var i = 0; i < 1000; i++) {
     var ship = lives.create(game.world.width - 100 + 30 * i, 60, "ship");
     ship.anchor.setTo(0.5, 0.5);
     ship.angle = 90;
@@ -178,9 +178,8 @@ function update() {
 }
 
 function render() {
-  // for (var i = 0; i < aliens.length; i++)
-  // {
-  //     game.debug.body(aliens.children[i]);
+  // for (var i = 0; i < aliens.length; i++) {
+  //   game.debug.body(aliens.children[i]);
   // }
 }
 
@@ -271,8 +270,8 @@ function fireBullet() {
     if (bullet) {
       //  And fire it
       bullet.reset(player.x, player.y + 8);
-      bullet.body.velocity.y = -400;
-      bulletTime = game.time.now + 200;
+      bullet.body.velocity.y = -800;
+      bulletTime = game.time.now + 400;
     }
   }
 }
