@@ -1,4 +1,4 @@
-var game = new Phaser.Game(1200, 800, Phaser.AUTO, "phaser-example", {
+var game = new Phaser.Game(730, 800, Phaser.AUTO, "phaser-example", {
   preload: preload,
   create: create,
   update: update,
@@ -92,7 +92,7 @@ function create() {
   stateText.anchor.setTo(0.5, 0.5);
   stateText.visible = false;
 
-  for (var i = 0; i < 1000; i++) {
+  for (var i = 0; i < 3; i++) {
     var ship = lives.create(game.world.width - 100 + 30 * i, 60, "ship");
     ship.anchor.setTo(0.5, 0.5);
     ship.angle = 90;
