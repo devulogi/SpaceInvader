@@ -36,14 +36,14 @@ function create() {
   game.physics.startSystem(Phaser.Physics.ARCADE);
 
   //  The scrolling starfield background
-  starfield = game.add.tileSprite(0, 0, 800, 600, "starfield");
+  starfield = game.add.tileSprite(0, 0, 730, 800, "starfield");
 
   //  Our bullet group
   bullets = game.add.group();
   bullets.enableBody = true;
   bullets.physicsBodyType = Phaser.Physics.ARCADE;
   bullets.createMultiple(30, "bullet");
-  bullets.setAll("anchor.x", 0.5);
+  bullets.setAll("anchor.x", 0.2); // should be 0.5
   bullets.setAll("anchor.y", 1);
   bullets.setAll("outOfBoundsKill", true);
   bullets.setAll("checkWorldBounds", true);
@@ -110,7 +110,7 @@ function create() {
 }
 
 function createAliens() {
-  for (var y = 0; y < 4; y++) {
+  for (var y = 0; y < 5; y++) {
     for (var x = 0; x < 10; x++) {
       var alien = aliens.create(x * 48, y * 50, "invader");
       alien.anchor.setTo(0.5, 0.5);
